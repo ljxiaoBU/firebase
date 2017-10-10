@@ -1,17 +1,17 @@
 {
   "database": {
-    "rules": "database.rules.json"
+    "rules": "database-rules.json"
   },
   "storage": {
     "rules": "storage.rules"
   },
   "hosting": {
-    "public": "dist",
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
+    "public": "./",
+    "ignore": [
+      "firebase.json",
+      "database-rules.json",
+      "storage.rules",
+      "functions"
     ],
     "headers": [{
       "source" : "**/*.@(js|html)",
